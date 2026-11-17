@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Green Club - Réservation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <header id="haut">
+        <h1>Le Green Club</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parcours.html">Le parcours</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="reservation.html" class="actif">Réservation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="conteneur">
+
+        <section>
+            <article>
+                <h2>Réserver un départ</h2>
+                <p>
+                    Vous voulez jouer au Green Club ou essayer le golf pour la première fois ?
+                    Remplissez ce formulaire pour réserver un départ sur le parcours, une initiation
+                    avec l'un de nos moniteurs ou une séance au practice.
+                </p>
+                <p>Vous pouvez réserver pour <strong>4 joueurs maximum</strong> à la fois.</p>
+
+                <form id="formulaire">
+
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" class="champ" placeholder="Votre nom" autofocus required>
+
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" class="champ" placeholder="exemple@mail.fr" required>
+
+                    <label for="mdp">Mot de passe :</label>
+                    <input type="password" id="mdp" class="champ" placeholder="Choisissez un mot de passe" required>
+
+                    <label for="site">Site de votre ancien club (facultatif) :</label>
+                    <input type="url" id="site" class="champ" placeholder="https://...">
+
+                    <label for="age">Âge :</label>
+                    <input type="number" id="age" class="champ" placeholder="Entre 6 et 99 ans" min="6" max="99" required>
+
+                    <label for="joueurs">Nombre de joueurs :</label>
+                    <select id="joueurs" class="champ">
+                        <option>1 joueur</option>
+                        <option>2 joueurs</option>
+                        <option>3 joueurs</option>
+                        <option>4 joueurs</option>
+                    </select>
+
+                    <p>Type de réservation :</p>
+                    <input type="radio" id="parcours18" name="type" checked><label for="parcours18">Parcours 18 trous</label>
+                    <br>
+                    <input type="radio" id="parcours9" name="type"><label for="parcours9">Parcours 9 trous</label>
+                    <br>
+                    <input type="radio" id="initiation" name="type"><label for="initiation">Initiation</label>
+                    <br>
+                    <input type="radio" id="practice" name="type"><label for="practice">Practice</label>
+                    <br><br>
+
+                    <label for="creneau">Créneau :</label>
+                    <select id="creneau" class="champ">
+                        <option>Matin (8h - 12h)</option>
+                        <option selected>Après-midi (13h - 17h)</option>
+                        <option>Soir (17h - 19h)</option>
+                    </select>
+
+                    <p>Options :</p>
+                    <input type="checkbox" id="chariot"><label for="chariot">Louer un chariot</label>
+                    <br>
+                    <input type="checkbox" id="clubs"><label for="clubs">Louer des clubs</label>
+                    <br>
+                    <input type="checkbox" id="reglement" required><label for="reglement">J'accepte le règlement du club</label>
+
+                    <br><br>
+                    <input type="submit" value="Réserver" class="bouton">
+
+                </form>
+            </article>
+        </section>
+
+        <aside>
+            <h3>Comment ça marche ?</h3>
+            <ol>
+                <li>Remplir le formulaire</li>
+                <li>Recevoir un email de confirmation</li>
+                <li>Venir 15 minutes avant</li>
+            </ol>
+            <h4>Annulation</h4>
+            <p>L'annulation est gratuite jusqu'à 24 heures avant votre départ.</p>
+            <h4>L'initiation</h4>
+            <p>Elle dure 2 heures et le matériel est prêté. Elle est ouverte aux enfants à partir de 6 ans.</p>
+            <h4>Le practice</h4>
+            <p>Un seau de 50 balles est fourni pour vous entraîner pendant 1 heure.</p>
+            <h4>Les prix</h4>
+            <p>Tous nos prix sont sur la page <a href="tarifs.html">Tarifs</a>.</p>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Le Green Club - Site réalisé par Jules Bony et Tom Jullien (PeIP 2) - Photos : <a href="https://www.pexels.com" target="_blank">Pexels</a></p>
+    </footer>
+
+    <a href="#haut" class="bouton-haut">Haut</a>
+
+</body>
+</html>

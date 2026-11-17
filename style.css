@@ -1,0 +1,314 @@
+/* Projet Le Green Club - Jules Bony et Tom Jullien */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    font-size: 1em;
+    background: #f2f2e9;
+    color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1e5631;
+}
+
+a {
+    color: #1e5631;
+}
+
+a:hover {
+    color: #e0a800;
+}
+
+
+/* ---------- En-tête et menu (flexbox) ---------- */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e5631;
+    padding: 10px 30px;
+}
+
+header h1 {
+    color: white;
+    font-size: 1.8em;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+nav a:hover {
+    color: white;
+    border: 1px solid white;
+}
+
+.actif {
+    background: #e0a800;
+}
+
+
+/* ---------- Bannière (position relative / absolute) ---------- */
+
+.banniere {
+    position: relative;
+}
+
+.banniere img {
+    display: block;
+    width: 100%;
+}
+
+.texte-banniere {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    background: rgb(30, 86, 49);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.texte-banniere h2 {
+    color: white;
+    margin-top: 0;
+}
+
+.texte-banniere p {
+    color: white;
+}
+
+
+/* ---------- Contenu + aside (flexbox) ---------- */
+
+.conteneur {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 30px;
+}
+
+section {
+    width: 70%;
+}
+
+article {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+aside {
+    width: 26%;
+    background: #d4edda;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.image-article {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* ---------- Cartes des trous (grid) ---------- */
+
+.grille {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.carte {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.carte img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* ---------- Tableau ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #999999;
+    padding: 8px;
+    text-align: center;
+}
+
+thead th {
+    background: #1e5631;
+    color: white;
+}
+
+tbody th {
+    background: #d4edda;
+}
+
+tfoot td {
+    font-style: italic;
+    background: #f2f2e9;
+}
+
+
+/* ---------- Formulaire ---------- */
+
+.champ {
+    display: block;
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    font-family: Montserrat, sans-serif;
+}
+
+.champ:focus {
+    border: 2px solid #1e5631;
+    background: #eef7ee;
+}
+
+.bouton {
+    background: #1e5631;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+.bouton:hover {
+    background: #e0a800;
+}
+
+
+/* ---------- Pied de page ---------- */
+
+footer {
+    background: #1e5631;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: white;
+}
+
+
+/* ---------- Bouton retour en haut (position fixed) ---------- */
+
+.bouton-haut {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #e0a800;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.bouton-haut:hover {
+    background: #1e5631;
+    color: white;
+}
+
+
+/* ---------- Responsive (téléphone) ---------- */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .texte-banniere {
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+    }
+
+    .texte-banniere h2 {
+        font-size: 1.1em;
+        margin: 0;
+    }
+
+    .texte-banniere p {
+        display: none;
+    }
+
+    .conteneur {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+    }
+
+    article {
+        padding: 10px;
+    }
+
+    table {
+        width: auto;
+    }
+
+    th, td {
+        padding: 4px;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    aside {
+        width: auto;
+    }
+
+    .grille {
+        grid-template-columns: 1fr;
+    }
+}
